@@ -40,7 +40,7 @@ const Footer = () => {
         </div>
         
         <div className="mt-8 pt-8 border-t text-center text-gray-600">
-          <p>© {new Date().getFullYear()} Odonto Web. Todos los derechos reservados.</p>
+          <p>© {new Date().getFullYear()} Odonto Web. Contenido creado para fines informativos y de promoción.</p>
         </div>
       </div>
     </footer>

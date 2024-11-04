@@ -7,9 +7,9 @@ const Navbar = () => {
 
   const menuItems = [
     { name: 'Inicio', href: '/' },
-    { name: 'Servicios', href: '#servicios' },
-    { name: 'Especialistas', href: '#especialistas' },
-    { name: 'Testimonios', href: '#testimonios' },
+    { name: 'Servicios', href: '/servicios' },
+    { name: 'Especialistas', href: '/#especialistas' },
+    { name: 'Testimonios', href: '/#testimonios' },
     { name: 'Blog', href: '/blog' },
     { name: 'Contacto', href: '#contacto' },
   ];
@@ -35,7 +35,7 @@ const Navbar = () => {
                 {item.name}
               </Link>
             ))}
-            <button className="bg-blue-600 text-white px-4 py-2 rounded-full hover:bg-blue-700 transition duration-300">
+            <button className="bg-blue-600 text-white px-4 py-2 rounded-full hover:bg-blue-700 transition duration-300 btn-grad">
               Agendar Cita
             </button>
           </div>
@@ -72,7 +72,7 @@ const Navbar = () => {
                   {item.name}
                 </Link>
               ))}
-              <button className="w-full mt-2 bg-blue-600 text-white px-4 py-2 rounded-full hover:bg-blue-700 transition duration-300">
+              <button className="w-full mt-2 bg-blue-600 text-white px-4 py-2 rounded-full hover:bg-blue-700 transition duration-300 btn-grad">
                 Agendar Cita
               </button>
             </div>

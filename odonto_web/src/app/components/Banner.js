@@ -12,7 +12,7 @@ const Banner = () => {
             <p className="text-lg text-gray-600 mb-8">
               Ofrecemos servicios dentales de primera calidad con profesionales altamente calificados.
             </p>
-            <button className="bg-blue-600 text-white px-8 py-3 rounded-full hover:bg-blue-700 transition duration-300">
+            <button className="bg-blue-600 text-white px-8 py-3 rounded-full hover:bg-blue-700 transition duration-300 btn-grad">
               Agenda tu cita
             </button>
           </div>
