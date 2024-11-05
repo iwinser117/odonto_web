@@ -21,7 +21,7 @@ export default function BlogPostDental() {
                             {/* Introducción */}
                             <div className="mb-8">
                                 <p className="text-lg text-gray-700 leading-relaxed">
-                                    ¿Te ha pasado que el dentista menciona números como "48" o "38" y te preguntas de dónde salen tantos dientes? No estás solo. Una paciente nos preguntó recientemente: <em>"¿De dónde sacaron ustedes 48 dientes si yo tengo solo 32?"</em> Hoy vamos a resolver este misterio de la numeración dental.
+                                    ¿Te ha pasado que el dentista menciona números como &quot;48&quot; o &quot;38&quot; y te preguntas de dónde salen tantos dientes? No estás solo. Una paciente nos preguntó recientemente: <em>&quot;¿De dónde sacaron ustedes 48 dientes si yo tengo solo 32?&quot;</em> Hoy vamos a resolver este misterio de la numeración dental.
                                 </p>
                             </div>
 
