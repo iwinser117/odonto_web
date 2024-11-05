@@ -1,6 +1,10 @@
+"use client"
 import Image from "next/image";
-
+import { useState } from "react";
+import AppointmentModal from "./AppointmentModal";
 const Banner = () => {
+  const [isAppointmentModal, setIsAppointmentModal] = useState(false);
+
   return (
     <div className="relative bg-gradient-to-r from-blue-50 to-blue-100">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 py-20">
@@ -12,7 +16,7 @@ const Banner = () => {
             <p className="text-lg text-gray-600 mb-8">
               Ofrecemos servicios dentales de primera calidad con profesionales altamente calificados.
             </p>
-            <button className="bg-blue-600 text-white px-8 py-3 rounded-full hover:bg-blue-700 transition duration-300 btn-grad">
+            <button onClick={() => setIsAppointmentModal(true)} className="bg-blue-600 text-white px-8 py-3 rounded-full hover:bg-blue-700 transition duration-300 btn-grad">
               Agenda tu cita
             </button>
           </div>
@@ -26,6 +30,10 @@ const Banner = () => {
           </div>
         </div>
       </div>
+      <AppointmentModal
+        isOpen={isAppointmentModal}
+        onClose={() => setIsAppointmentModal(false)}
+      />
     </div>
   );
 };

@@ -1,9 +1,15 @@
 'use client'
 import Link from 'next/link';
 import { useState } from 'react';
+import ContactModal from './ContactModal';
+import AppointmentModal from './AppointmentModal';
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
+  const [isContactModalOpen, setIsContactModalOpen] = useState(false);
+  const [isAppointmentModal, setIsAppointmentModal] = useState(false);
+
+
 
   const menuItems = [
     { name: 'Inicio', href: '/' },
@@ -11,7 +17,7 @@ const Navbar = () => {
     { name: 'Especialistas', href: '/#especialistas' },
     { name: 'Testimonios', href: '/#testimonios' },
     { name: 'Blog', href: '/blog' },
-    { name: 'Contacto', href: '#contacto' },
+    { name: 'Contacto', href: '#contacto', fn: () => setIsContactModalOpen(true) },
   ];
 
   return (
@@ -31,11 +37,12 @@ const Navbar = () => {
                 key={item.name}
                 href={item.href}
                 className="text-gray-700 hover:text-blue-600 transition duration-300"
+                onClick={item.fn}
               >
                 {item.name}
               </Link>
             ))}
-            <button className="bg-blue-600 text-white px-4 py-2 rounded-full hover:bg-blue-700 transition duration-300 btn-grad">
+            <button onClick={() => setIsAppointmentModal(true)} className="bg-blue-600 text-white px-4 py-2 rounded-full hover:bg-blue-700 transition duration-300 btn-grad">
               Agendar Cita
             </button>
           </div>
@@ -45,6 +52,7 @@ const Navbar = () => {
             <button
               onClick={() => setIsOpen(!isOpen)}
               className="text-gray-700"
+              aria-label="mobile menu"
             >
               {isOpen ? (
                 <svg className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -68,6 +76,7 @@ const Navbar = () => {
                   key={item.name}
                   href={item.href}
                   className="block px-3 py-2 text-gray-700 hover:text-blue-600 transition duration-300"
+                  onClick={item.fn}
                 >
                   {item.name}
                 </Link>
@@ -79,6 +88,14 @@ const Navbar = () => {
           </div>
         )}
       </div>
+      <ContactModal
+        isOpen={isContactModalOpen}
+        onClose={() => setIsContactModalOpen(false)}
+      />
+      <AppointmentModal
+        isOpen={isAppointmentModal}
+        onClose={() => setIsAppointmentModal(false)}
+      />
     </nav>
   );
 };

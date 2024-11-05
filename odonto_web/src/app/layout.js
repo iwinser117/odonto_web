@@ -18,6 +18,11 @@ export const metadata = {
   keywords: "dentista, clínica dental, odontología, ortodoncista, implantes dentales, limpieza dental, blanqueamiento dental",
   title: 'Odonto Web - Clínica Dental',
   description: 'Servicios odontológicos de alta calidad',
+  icons: {
+    icon: "/iconiwinser.svg",
+    shortcut: "/iconiwinser.svg",
+    apple: "/iconiwinser.svg",
+  },
 };
 
 export default function RootLayout({ children }) {
